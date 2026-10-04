@@ -542,6 +542,10 @@
     foot.className = "yb-foot";
     foot.innerHTML = `YieldBook — 공학도를 위한 인터랙티브 반도체 수율 분석 교과서 · 수치는 교육용 근사 모델입니다.<br>
       © 2026 geniuskey 및 YieldBook 기여자 · 콘텐츠 <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · 코드 <a href="${root}LICENSE-MIT">MIT</a> · <a href="${root}LICENSE.md">라이선스 안내</a>`;
+    const feedbackLink = document.createElement("a");
+    feedbackLink.href = "https://books.euiyun.com/feedback.html?book=yieldbook&page=" + encodeURIComponent(location.href);
+    feedbackLink.textContent = "오류·질문·제안";
+    foot.append(" · ", feedbackLink);
     body.appendChild(foot);
 
     // quiz
